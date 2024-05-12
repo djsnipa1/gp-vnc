@@ -28,3 +28,9 @@ RUN chmod 0755 "$(which gp-vncsession)" \
 COPY --chown=gitpod:gitpod .xinitrc $HOME/
 
 USER gitpod
+
+RUN nix profile install github:MHNightCat/superfile#superfile
+
+RUN nix profile install nixpkgs#lazygit nixpkgs#lf nixpkgs#neovim nixpkgs#gh
+
+RUN git clone https://github.com/lazyvim/starter $HOME/.config/nvim
