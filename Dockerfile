@@ -10,7 +10,7 @@ USER root
 RUN install-packages \
 	tigervnc-standalone-server tigervnc-xorg-extension \
 	dbus dbus-x11 gnome-keyring xfce4 xfce4-terminal \
-	xdg-utils x11-xserver-utils pip
+	xdg-utils x11-xserver-utils pip google-chrome-stable
 
 # Install novnc and numpy module for it
 RUN git clone --depth 1 https://github.com/novnc/noVNC.git /opt/novnc \
